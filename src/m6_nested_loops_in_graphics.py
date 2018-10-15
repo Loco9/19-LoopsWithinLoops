@@ -142,17 +142,16 @@ def draw_wall_on_right(rectangle, n, window):
     and n is a small, positive integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
-    rectangle1 = rectangle
     for i in range(n):
-        y1 = rectangle1.corner_1.y + (i * rectangle1.get_height())
-        y2 = rectangle1.corner_2.y + (i * rectangle1.get_height())
+        y1 = rectangle.corner_1.y + (i * rectangle.get_height())
+        y2 = rectangle.corner_2.y + (i * rectangle.get_height())
         for j in range(i + 1):
-            x1 = rectangle1.corner_1.x - (j * rectangle1.get_width())
-            x2 = rectangle1.corner_2.x - (j * rectangle1.get_width())
+            x1 = rectangle.corner_1.x - (j * rectangle.get_width())
+            x2 = rectangle.corner_2.x - (j * rectangle.get_width())
             point1 = rg.Point(x1, y1)
             point2 = rg.Point(x2, y2)
             rectangle1 = rg.Rectangle(point1, point2)
