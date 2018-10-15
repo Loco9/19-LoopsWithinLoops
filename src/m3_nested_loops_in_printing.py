@@ -12,9 +12,9 @@ def main():
 #    run_test_rectangle_of_stars()
 #    run_test_triangle_of_stars()
 #    run_test_decreasing_exclamation_marks()
-    run_test_alternating_brackets()
+#    run_test_alternating_brackets()
 #    run_test_triangle_same_number_in_each_row()
-#    run_test_triangle_all_numbers_in_each_row()
+    run_test_triangle_all_numbers_in_each_row()
 
 
 def run_test_rectangle_of_stars():
@@ -207,7 +207,7 @@ def alternating_brackets(m, n):
     Precondition:  m and n are positive integers with m >= n.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -216,12 +216,11 @@ def alternating_brackets(m, n):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    seq = ['[', ']', '[', ']', '[', ']', '[', ']', '[']
     for i in range(m - n + 1):
         for j in range(m - i):
-            if j % 2 == 1:
-                print('[', end='[')
-            else:
-                print('[', end=']')
+            print(seq[j], end='')
+
         print()
 
 def run_test_triangle_same_number_in_each_row():
@@ -304,7 +303,7 @@ def triangle_all_numbers_in_each_row(r):
     Precondition:  r is a non-negative integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -313,6 +312,10 @@ def triangle_all_numbers_in_each_row(r):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    for i in range(r):
+        for j in range(i + 1):
+            print(j + 1, end='')
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
